@@ -17,3 +17,4 @@ data = data.set_index("DateTime")
 
 # saves file
 data.to_pickle("data/winddaten.pkl")
+data.to_csv("data/winddaten.csv")
