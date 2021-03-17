@@ -15,6 +15,10 @@ data = data.drop(["year", "month", "day", "hour"], axis=1)
 data["DateTime"] = date_time
 data = data.set_index("DateTime")
 
+# replaces -999 with zero
+data = data.replace(-999, 0)
+print(data.describe())
+
 # saves file
 data.to_pickle("data/winddaten.pkl")
 data.to_csv("data/winddaten.csv")
