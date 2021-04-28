@@ -16,7 +16,7 @@ data["DateTime"] = date_time
 data = data.set_index("DateTime")
 
 # replaces -999 with zero
-data = data.replace(-999, 0)
+# data = data.replace(-999, 0)
 print(data.describe())
 
 # saves file
